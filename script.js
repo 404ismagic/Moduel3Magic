@@ -45,6 +45,22 @@ function generatePassword() {
     validChars += special;
     console.log ( 'validChars = ', validChars);
   }
+
+  // now have a for loop to generate as  many random chars from
+  //  validChars and form a  random password
+
+  var randomPassword = '';
+  var randomIndex = 0;
+  var randomChar = '';
+
+  for ( var i=0; i < passwordLength;i++) {
+    randomIndex = Math.floor(Math.random()*validChars.length);
+    randomChar = validChars[randomIndex];
+    randomPassword += randomChar;
+    console.log("randomPassword = ", randomPassword);
+  }
+
+  return randomPassword;
 }
 
 function  getPasswordCriteria() {
